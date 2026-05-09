@@ -6,6 +6,6 @@ def mw_to_dbm(power_mw):
         raise TypeError("Power must be a number.")
 
     if power_mw <= 0:
-        raise ValueError("Power must be greater than 0 mW.")
+        raise ValueError(f"Power must be > 0 mW; got {power_mw} mW (log10 undefined for non-positive)")
 
     return round(10 * math.log10(power_mw), 4)
