@@ -1,5 +1,7 @@
 # rf-power-calc
 
+![CI](https://github.com/sed233/rf-power-calc/actions/workflows/ci.yml/badge.svg)
+
 A Python utility for converting RF power milliWatts to dBm measurements.
 
 ## Background
