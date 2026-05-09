@@ -1,5 +1,6 @@
 import math
 
+
 def mw_to_dbm(power_mw):
     """Convert power in milliwatts to dBm."""
     if isinstance(power_mw, bool) or not isinstance(power_mw, (int, float)):

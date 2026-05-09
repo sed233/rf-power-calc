@@ -1,7 +1,5 @@
 """Tests for conversions.py."""
 
-import math
-
 import pytest
 
 from conversions import mw_to_dbm
