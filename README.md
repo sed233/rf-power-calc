@@ -2,11 +2,11 @@
 
 ![CI](https://github.com/sed233/rf-power-calc/actions/workflows/ci.yml/badge.svg)
 
-A Python utility for converting RF power milliWatts to dBm measurements.
+A Python program for converting RF power milliwatts to dBm measurements.
 
 ## Background
 
-RF engineers commonly have to convert power in milliWatts to dBm using the logarithmic function dBm = 10 * log10(power_mw / 1 mW) for signal measurements.
+RF engineers commonly have to convert power in milliwatts to dBm using the logarithmic function dBm = 10 * log10(power_mw / 1 mW) for signal measurements.
 
 ## Install
 
@@ -40,7 +40,7 @@ Bad inputs raise errors:
 ```python
 >>> mw_to_dbm(0)         # ValueError
 >>> mw_to_dbm("hello")   # TypeError
->>> mw_to_dbm(True)      # TypeError - bools are rejected on purpose
+>>> mw_to_dbm(True)      # TypeError - booleans are rejected on purpose
 ```
 
 Booleans are rejected explicitly because Python counts `True` as `1` and `False` as `0`, which would let `mw_to_dbm(True)` silently return `0.0`.
@@ -51,14 +51,14 @@ Booleans are rejected explicitly because Python counts `True` as `1` and `False`
 
 - Input: int or float, must be positive
 - Output: float, rounded to 4 decimals
-- Raises `TypeError` if input is not a number (or is a bool)
+- Raises `TypeError` if input is not a number (or is a boolean)
 - Raises `ValueError` if input is zero or negative
 
 Formula: `dBm = 10 * log10(P_mW / 1 mW)`
 
 ## Contributing
 
-This is a coursework project for Cornell SYSEN 5493. Not accepting outside contributions right now, but feel free to open an issue if something's broken.
+This is a coursework project for Cornell SYSEN 5493.
 
 ## License
 
